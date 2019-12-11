@@ -5,12 +5,13 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
 import initialState from './initial-state';
-import Application from './containers/ApplicationContainer';
+// import Application from './containers/ApplicationContainer';
+import Application from './components/RegisterForm';
 import './index.css';
 
-import { startListeningToAuthChanges } from './actions/auth';
-import { startListeningForUsers } from './actions/users';
-import { startListeningForMessages } from './actions/messages';
+// import { startListeningToAuthChanges } from './actions/auth';
+// import { startListeningForUsers } from './actions/users';
+// import { startListeningForMessages } from './actions/messages';
 
 const middleware = [ thunk ];
 const enhancers = [];
@@ -32,6 +33,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-store.dispatch(startListeningToAuthChanges());
-store.dispatch(startListeningForUsers());
-store.dispatch(startListeningForMessages());
+// store.dispatch(startListeningToAuthChanges());
+// store.dispatch(startListeningForUsers());
+// store.dispatch(startListeningForMessages());
