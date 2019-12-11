@@ -25,7 +25,12 @@ class RegisterForm extends React.Component {
                         isRegisterd: true
                     }, () => {
                         window.setTimeout(() => {
-                            that.setState({ isRegisterd: false })
+                            that.setState({
+                                isRegisterd: false,
+                                name: '',
+                                email: '',
+                                type: 'free'
+                            })
                         }, 3000)
                     })
                 });
